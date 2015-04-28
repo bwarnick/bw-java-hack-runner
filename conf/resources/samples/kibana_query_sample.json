@@ -1,0 +1,66 @@
+{
+  "took" : 882,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 8,
+    "successful" : 8,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 193945,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "logstash-2015.03.23",
+      "_type" : "logs",
+      "_id" : "u53E10ioT0mJAtBaS1WpWw",
+      "_score" : 1.0,
+      "fields" : {
+        "@timestamp" : [ "2015-03-23T18:57:57.456+00:00" ],
+        "xDistilBot" : [ 0 ],
+        "cookie.cust_id" : [ "9dd0860f-834d-41af-af07-f0a9ceaea849" ],
+        "clientAddr" : [ "104.4.241.255" ],
+        "contentLength" : [ "25" ],
+        "url" : [ "/fapi/ditto/merchants/SuperPages" ]
+      }
+    }, {
+      "_index" : "logstash-2015.03.23",
+      "_type" : "logs",
+      "_id" : "fgwrsUvhT8mFA68Nx_iMIQ",
+      "_score" : 1.0,
+      "fields" : {
+        "@timestamp" : [ "2015-03-23T18:57:57.811+00:00" ],
+        "xDistilBot" : [ 0 ],
+        "cookie.cust_id" : [ "89593371-d369-4bd8-bd22-1c82cbfc8093" ],
+        "clientAddr" : [ "209.183.8.66" ],
+        "contentLength" : [ "232672" ],
+        "url" : [ "/mb_44_A62C9_06/surveying_services/colorado?" ]
+      }
+    }, {
+      "_index" : "logstash-2015.03.23",
+      "_type" : "logs",
+      "_id" : "ZUyF3to1QoKch8F1L06wcQ",
+      "_score" : 1.0,
+      "fields" : {
+        "@timestamp" : [ "2015-03-23T18:57:59.423+00:00" ],
+        "xDistilBot" : [ 0 ],
+        "cookie.cust_id" : [ "ad45ebfb-9159-40b7-86bf-c4ccf45fcd0b" ],
+        "clientAddr" : [ "147.203.24.8" ],
+        "contentLength" : [ "71199" ],
+        "url" : [ "/c/mm7hzvc/grand-ford-inc" ]
+      }
+    }, {
+      "_index" : "logstash-2015.03.23",
+      "_type" : "logs",
+      "_id" : "5s8bYYzYSBqaCzUp48uFaw",
+      "_score" : 1.0,
+      "fields" : {
+        "@timestamp" : [ "2015-03-23T18:58:00.142+00:00" ],
+        "xDistilBot" : [ 0 ],
+        "cookie.cust_id" : [ "08e63bb8-0c7a-4a9a-a306-9a22918bb8a4" ],
+        "clientAddr" : [ "70.208.128.31" ],
+        "contentLength" : [ "72165" ],
+        "url" : [ "/c/mrsjdmt/fogleman-s-financial-services-inc" ]
+      }
+   } ]
+  }
+}

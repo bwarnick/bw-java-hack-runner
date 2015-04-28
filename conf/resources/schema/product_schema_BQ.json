@@ -1,0 +1,165 @@
+{
+  "fields" : [
+  {
+    "name" : "__v",
+    "type" : "INTEGER"
+  }, {
+    "name" : "_id",
+    "type" : "STRING"
+  }, {
+    "fields" : [ {
+      "name" : "description",
+      "type" : "STRING"
+    }, {
+      "name" : "ref_id",
+      "type" : "STRING"
+    }, {
+      "fields" : [ {
+        "name" : "reason",
+        "type" : "STRING"
+      }, {
+        "name" : "comment",
+        "type" : "STRING"
+      }, {
+        "name" : "status",
+        "type" : "STRING"
+      }, {
+        "fields" : [ {
+          "name" : "id",
+          "type" : "STRING"
+        }, {
+          "name" : "type",
+          "type" : "STRING"
+        } ],
+        "name" : "createdBy",
+        "type" : "RECORD"
+      }, {
+        "name" : "createdDate",
+        "type" : "TIMESTAMP"
+      }, {
+        "name" : "updatedDate",
+        "type" : "TIMESTAMP"
+      } ],
+      "name" : "hidden",
+      "type" : "RECORD"
+    }, {
+      "name" : "id",
+      "type" : "STRING"
+    }, {
+      "name" : "featured",
+      "type" : "TIMESTAMP"
+    }, {
+      "name" : "notified",
+      "type" : "TIMESTAMP"
+    }, {
+      "name" : "kid",
+      "type" : "STRING"
+    }, {
+      "name" : "kind",
+      "type" : "STRING"
+    }, {
+      "name" : "rl",
+      "type" : "STRING"
+    }, {
+      "name" : "type",
+      "type" : "STRING"
+    }, {
+      "fields" : [ {
+        "name" : "id",
+        "type" : "STRING"
+      }, {
+        "name" : "type",
+        "type" : "STRING"
+      } ],
+      "name" : "updatedBy",
+      "type" : "RECORD"
+    } ],
+    "name" : "attrs",
+    "type" : "RECORD"
+  }, {
+    "fields" : [ {
+      "name" : "id",
+      "type" : "STRING"
+    }, {
+      "name" : "type",
+      "type" : "STRING"
+    } ],
+    "name" : "from",
+    "type" : "RECORD"
+  }, {
+    "fields" : [ {
+      "name" : "isReport",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "reason",
+      "type" : "STRING"
+    }, {
+      "name" : "comment",
+      "type" : "STRING"
+    }, {
+      "name" : "status",
+      "type" : "STRING"
+    }, {
+      "name" : "createdDate",
+      "type" : "TIMESTAMP"
+    }, {
+      "name" : "updatedDate",
+      "type" : "TIMESTAMP"
+    }, {
+      "fields" : [ {
+        "name" : "id",
+        "type" : "STRING"
+      }, {
+        "name" : "type",
+        "type" : "STRING"
+      } ],
+      "name" : "createdBy",
+      "type" : "RECORD"
+    } ],
+    "mode" : "REPEATED",
+    "name" : "reports",
+    "type" : "RECORD"
+  }, {
+    "name" : "subType",
+    "type" : "BOOLEAN"
+  }, {
+    "fields" : [ {
+      "name" : "id",
+      "type" : "STRING"
+    }, {
+      "name" : "type",
+      "type" : "STRING"
+    } ],
+    "name" : "to",
+    "type" : "RECORD"
+  }, {
+    "name" : "type",
+    "type" : "STRING"
+  }, {
+    "fields" : [ {
+      "name" : "id",
+      "type" : "STRING"
+    }, {
+      "name" : "type",
+      "type" : "STRING"
+    } ],
+    "name" : "createdBy",
+    "type" : "RECORD"
+  }, {
+    "name" : "createdDate",
+    "type" : "TIMESTAMP"
+  }, {
+    "fields" : [ {
+      "name" : "id",
+      "type" : "STRING"
+    }, {
+      "name" : "type",
+      "type" : "STRING"
+    } ],
+    "name" : "updatedBy",
+    "type" : "RECORD"
+  }, {
+    "name" : "updatedDate",
+    "type" : "TIMESTAMP"
+  } ]
+}

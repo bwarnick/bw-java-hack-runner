@@ -1,0 +1,38 @@
+{
+  "fields" : [
+    {
+      "name" : "_timestamp",
+      "type" : "TIMESTAMP"
+    },
+    {
+      "name" : "clientaddr",
+      "type" : "STRING"
+    },
+    {
+      "name" : "status",
+      "type" : "INTEGER"
+    },
+    {
+      "name" : "url",
+      "type" : "STRING"
+    },
+    {
+      "name" : "contentLength",
+      "type" : "INTEGER"
+    },
+    {
+      "name" : "cookie_cust_id",
+      "type" : "STRING"
+    },
+    {
+      "name" : "session_data_member_email",
+      "type" : "STRING"
+    },
+    {
+      "name" : "xdistilbot",
+      "type" : "INTEGER"
+    }
+  ]
+}
+
+
