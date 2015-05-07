@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.MappingJsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class HacksonInputParser {
+public class HacksonStringParser {
 
   private JsonParser parser;
   private JsonToken current;
@@ -73,7 +73,7 @@ public class HacksonInputParser {
   // "LoveScore":90,
   // "Cross-validatedProfileUrl":"
 
-  public HacksonInputParser( ) throws Exception {
+  public HacksonStringParser( ) throws Exception {
     JsonFactory factory = new MappingJsonFactory();
     parser = factory.createParser( input );
     parser.configure( JsonParser.Feature.ALLOW_SINGLE_QUOTES, true );

@@ -3,6 +3,7 @@
 	<name>bw-java-hack-runner</name>
 	<comment></comment>
 	<projects>
+		<project>GeoDNA-Java</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
