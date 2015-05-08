@@ -1,6 +1,6 @@
 package com.manta.hack;
 
-import com.manta.company.CompanyNameParser;
+import com.manta.company.NameWordRunner;
 
 public class HackRunner {
 
@@ -22,8 +22,10 @@ public class HackRunner {
     // BigqueryDataLoad.streamingInsert( "test" );
     // BigqueryDataLoad.test();
 
-    CompanyNameParser names = new CompanyNameParser();
-    names.fileLineParser();
+    // NameWordBuilder hash = new NameWordBuilder();
+    // hash.nameFileParser();
+    NameWordRunner names = new NameWordRunner();
+    names.nameFileParser();
 
     // Test KibanaQuerySequence
     /*
