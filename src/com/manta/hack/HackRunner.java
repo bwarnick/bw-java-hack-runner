@@ -25,7 +25,7 @@ public class HackRunner {
     // NameWordBuilder hash = new NameWordBuilder();
     // hash.nameFileParser();
     NameWordRunner names = new NameWordRunner();
-    names.nameFileParser();
+    names.nameFileParser( "tohash" );
 
     // Test KibanaQuerySequence
     /*
