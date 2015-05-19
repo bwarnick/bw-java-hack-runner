@@ -48,7 +48,6 @@ public class NameWords {
     //RefinedSoundex soundslike = new RefinedSoundex();
     //Soundex soundslike = new Soundex();
     DoubleMetaphone soundslike = new DoubleMetaphone();
-    //soundslike.setMaxCodeLen( 8 );
     //System.out.println( soundslike.getMaxCodeLen() );
     String hash = "";
     String result = "";
