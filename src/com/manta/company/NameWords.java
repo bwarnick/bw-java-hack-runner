@@ -7,18 +7,20 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
 
+import org.apache.commons.codec.language.DoubleMetaphone;
+import org.apache.commons.codec.language.RefinedSoundex;
+import org.apache.commons.codec.language.Soundex;
+
 public class NameWords {
 
   private Map<Integer, String> wordsort;
-  // deprecate - private int usecap = 10000000;
-  // deprecate - private int wordcap = 2;
   private int precision = 22;
   private String delimiter = "";
+  private int leastscore = 0;
 
 
   public NameWords( String w, int p ) {
     precision = p;
-    // bigquery load 1 - cap=1000000, wordcap = 5, precision null and delimiter = "-"
     String[] raw = w.split( " " );
     HashMap<Integer, String> words = new HashMap<Integer, String>();
     int i = 0;
@@ -26,10 +28,6 @@ public class NameWords {
     while ( i < raw.length ) {
       if ( WordsHash.map.containsKey( raw[i] ) ) {
         q = ( int ) WordsHash.map.get( raw[i] );
-        // if ( q > 1000000 )
-        // System.out.println( 1000000 + " - " + raw[i] );
-        // if ( q == 1 )
-        // System.out.println( 1 + " - " + raw[i] );
         words.put( q, raw[i] );
         // }
       }
@@ -47,18 +45,38 @@ public class NameWords {
   public String nameHash( ) {
     Set<Entry<Integer, String>> entrySet = wordsort.entrySet();
     Iterator<Entry<Integer, String>> it = entrySet.iterator();
+    //RefinedSoundex soundslike = new RefinedSoundex();
+    //Soundex soundslike = new Soundex();
+    DoubleMetaphone soundslike = new DoubleMetaphone();
+    //soundslike.setMaxCodeLen( 8 );
+    //System.out.println( soundslike.getMaxCodeLen() );
     String hash = "";
+    String result = "";
+    String temp = "";
+    
     int i = 0;
     while ( it.hasNext() ) {
-      // if ( i < wordcap ) {
-      hash = hash + delimiter + it.next().toString().replaceAll( ".*=", "" );
-      // i++;
-      // } else {
-      // it.next();
-      // }
+      result = it.next().toString();
+      temp = temp + "-" + result.replaceAll( ".*=", "" ).toLowerCase();
+      if ( i == 0 ) {
+        setLeastscore( Integer.parseInt( result.replaceAll( "=.*", "" )) );
+      }
+      hash = hash + soundslike.encode( result.replaceAll( ".*=", "" ) ).toLowerCase();
+      i++;
     }
-    // System.out.println( hash );
-    hash = hash + "abcdefghijklmnopqrstuvwxyz";
+    hash = hash + "jpslsafrfkskktkprnnyzkzytqwtfdsxcvmjplmy";
+    if( temp.contains( "starbucks" )) {
+      //System.out.println( leastscore + temp );
+    }
     return hash.substring( 0, precision );
+  }
+
+
+  public int getLeastscore( ) {
+    return leastscore;
+  }
+
+  public void setLeastscore( int leastscore ) {
+    this.leastscore = leastscore;
   }
 }

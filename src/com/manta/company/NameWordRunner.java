@@ -16,14 +16,15 @@ import com.fasterxml.jackson.core.JsonParseException;
 public class NameWordRunner {
 
   // private String inputs = "c:/io/matching/xhackathon_mc2_mcp_all_";
-  private String inputs = "c:/io/matching/xhackathon_mc2_mcp_all_";
-  private String outputs = "c:/io/matching/bedrock_name_words_all_p_20_20_";
+  private String inputs = "/Users/bradwarnick/io/xmc2_oh_sample_";
+  private String outputs = "/Users/bradwarnick/io/xmc2_oh_sample_output_";
   private File name_words = new File( "conf/resources/data/name_words.ser" );
   private HashMap<String, String> names = new HashMap<String, String>();
   private int counter = 0;
+  private int dupecount = 0;
   private int segment = 100000;
   private int geo_precision = 22;
-  private int nam_precision = 26;
+  private int nam_precision = 16;
   private String ptype = "todisc";
 
 
@@ -44,14 +45,14 @@ public class NameWordRunner {
     String bline = "";
     String subline = "";
     String hash = "";
-    int j = 0;
+    int j = 1;
+  
 
     try {
-      while ( j < 1 ) {
-
+      while ( j < 2 ) {
         console( "Processing file " + j );
         input = new File( inputs + j );
-        output = new File( outputs + j + ".csv" );
+        output = new File( outputs + 1 + ".csv" );
         FileInputStream fstream = new FileInputStream( input );
         DataInputStream in = new DataInputStream( fstream );
         BufferedReader br = new BufferedReader( new InputStreamReader( in ) );
@@ -89,8 +90,9 @@ public class NameWordRunner {
             bow.newLine();
           } else {
             if ( names.containsKey( hash ) ) {
-              console( codat[0] + "|" + names.get( hash ) + "|" + hash );
-              bow.write( codat[0] + "|" + names.get( hash ) + "|" + hash );
+              dupecount++;
+              console( geo_precision + "/" + nam_precision + "|" + codat[0] + "|" + names.get( hash ) + "|" + hash );
+              bow.write(  geo_precision + "/" + nam_precision + "|" + codat[0] + "|" + names.get( hash ) + "|" + hash );
               bow.newLine();
             } else {
               names.put( hash, codat[0] );
@@ -99,12 +101,13 @@ public class NameWordRunner {
           // i++;
           counter++;
           if ( counter % segment == 0 ) {
-            console( String.valueOf( counter / segment ) );
+            //console( String.valueOf( counter / segment ) );
           }
         }
+        console( "Results = " + dupecount );
         j++;
         br.close();
-        bow.close();
+        //bow.close();
       }
 
     } catch ( Exception e ) {

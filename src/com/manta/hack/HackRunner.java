@@ -1,6 +1,6 @@
 package com.manta.hack;
 
-import com.manta.company.NameWordRunner;
+import com.manta.company.NameWordSampler;
 
 public class HackRunner {
 
@@ -24,7 +24,7 @@ public class HackRunner {
 
     // NameWordBuilder hash = new NameWordBuilder();
     // hash.nameFileParser();
-    NameWordRunner names = new NameWordRunner();
+    NameWordSampler names = new NameWordSampler();
     names.nameFileParser( "tohash" );
 
     // Test KibanaQuerySequence
