@@ -2,38 +2,36 @@ package com.manta.company;
 
 public class NameCleaner {
 
-  private static String[][] reps = { { "http://", "http://", "" }, { "www.", "www.", "" }, { "|", "|", "|" },
-      { "!", "!", "!" }, { "\"", "\"", "" }, { "#", "#", "" }, { "$", "$", "" }, { "%", "%", "" }, { "&", "&", " & " },
-      { "'", "'", "" }, { "(", "\\(", " " }, { ")", "\\)", " " }, { "*", "\\*", " " }, { "+", "\\+", " " },
-      { ",", ",", " " }, { "-", "\\-", " " }, { ".", "\\.", "" }, { "/", "/", " " }, { ":", ":", " " },
-      { ";", ";", " " }, { "<", "<", "" }, { "=", "=", "" }, { ">", ">", "" }, { "?", "\\?", "" }, { "@", "@", "" },
-      { "[", "\\[", "" }, { "\\", "\\\\", "" }, { "]", "\\]", "" }, { "^", "^", "" }, { "_", "_", " " },
-      { "`", "`", "" }, { "{", "\\{", "" }, { "|", "|", "" }, { "}", "\\}", "" }, { "~", "~", "" } };
+   private static String[][] reps = { { "http://", "http://", "" }, { "www.", "www.", "" }, { "|", "|", "|" },
+         { "!", "!", "!" }, { "\"", "\"", "" }, { "#", "#", "" }, { "$", "$", "" }, { "%", "%", "" },
+         { "&", "&", " & " }, { "'", "'", "" }, { "(", "\\(", " " }, { ")", "\\)", " " }, { "*", "\\*", " " },
+         { "+", "\\+", " " }, { ",", ",", " " }, { "-", "\\-", " " }, { ".", "\\.", "" }, { "/", "/", " " },
+         { ":", ":", " " }, { ";", ";", " " }, { "<", "<", "" }, { "=", "=", "" }, { ">", ">", "" },
+         { "?", "\\?", "" }, { "@", "@", "" }, { "[", "\\[", "" }, { "\\", "\\\\", "" }, { "]", "\\]", "" },
+         { "^", "^", "" }, { "_", "_", " " }, { "`", "`", "" }, { "{", "\\{", "" }, { "|", "|", "" },
+         { "}", "\\}", "" }, { "~", "~", "" } };
 
+   public NameCleaner( ) {
+   }
 
-  public NameCleaner( ) {
-  }
+   public String Clean( String name ) {
 
+      name = name.toLowerCase();
 
-  public String Clean( String name ) {
-
-    name = name.toLowerCase();
-
-    int j = 0;
-    for ( j = 0; j < reps.length; j++ ) {
-      if ( name.contains( reps[j][0] ) ) {
-        name = name.replaceAll( reps[j][1], reps[j][2] );
+      int j = 0;
+      for ( j = 0; j < reps.length; j++ ) {
+         if ( name.contains( reps[j][0] ) ) {
+            name = name.replaceAll( reps[j][1], reps[j][2] );
+         }
       }
-    }
-    while ( name.contains( "  " ) ) {
-      name = name.replaceAll( "  ", " " );
-    }
-    return name.trim();
-  }
+      while ( name.contains( "  " ) ) {
+         name = name.replaceAll( "  ", " " );
+      }
+      return name.trim();
+   }
 
-
-  private void console( String s ) {
-    System.out.println( s );
-  }
+   private void console( String s ) {
+      System.out.println( s );
+   }
 
 } // end
