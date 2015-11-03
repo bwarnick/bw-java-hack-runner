@@ -9,115 +9,135 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 
 import com.fasterxml.jackson.core.JsonParseException;
 
 public class NameWordRunner {
 
-   // private String inputs = "c:/io/matching/xhackathon_mc2_mcp_all_";
-   private String inputs = "/Users/bradwarnick/io/xmc2_oh_sample_";
-   private String outputs = "/Users/bradwarnick/io/xmc2_oh_sample_output_";
+   // Run Company Name, Lat, Lon from a csv file, generate a geodna key and a name_words key and output to a file
+
+   private File input = new File( "/Users/bradwarnick/io/xLML_mc2_targets18.csv" );
+   private File output = new File( "/Users/bradwarnick/io/xLML_mc2_targets18_results.csv" );
    private File name_words = new File( "conf/resources/data/name_words.ser" );
-   private HashMap<String, String> names = new HashMap<String, String>();
+   private HashMap<String, Integer> geonam = new HashMap<String, Integer>();
+   ArrayList<CSVRecord> list = null;
+   CSVRecord record = null;
    private int counter = 0;
-   private int dupecount = 0;
-   private int segment = 100000;
+   private int dupes = 0;
    private int geo_precision = 22;
-   private int nam_precision = 16;
-   private String ptype = "todisc";
+   private int nam_precision = 12;
+   private String dl = "|";
+   private boolean ishead = true;
+   private int columns = 10;
+
 
    public NameWordRunner( ) {
    }
 
-   public void nameFileParser( String t ) throws JsonParseException, IOException, ClassNotFoundException {
+   public void nameFileParser( ) throws JsonParseException, IOException, ClassNotFoundException {
       console( "Start" );
-      ptype = t;
       NameCleaner cleaner = new NameCleaner();
       @SuppressWarnings( "unused" )
       WordsHash hashmap = new WordsHash( name_words );
-      File input;
-      File output;
+      String namdna = null;
       String[] codat;
       String geodna;
       String bline = "";
-      String subline = "";
-      String hash = "";
-      int j = 1;
+      // String subline = "";
+      // String hash = "";
+      // int j = 1;
 
       try {
-         while ( j < 2 ) {
-            console( "Processing file " + j );
-            input = new File( inputs + j );
-            output = new File( outputs + 1 + ".csv" );
-            FileInputStream fstream = new FileInputStream( input );
-            DataInputStream in = new DataInputStream( fstream );
-            BufferedReader br = new BufferedReader( new InputStreamReader( in ) );
-            FileOutputStream fos = new FileOutputStream( output );
-            BufferedWriter bow = new BufferedWriter( new OutputStreamWriter( fos ) );
+         console( "Processing file " + input.toString() );
+         FileInputStream fstream = new FileInputStream( input );
+         DataInputStream in = new DataInputStream( fstream );
+         BufferedReader br = new BufferedReader( new InputStreamReader( in ) );
+         FileOutputStream fos = new FileOutputStream( output );
+         BufferedWriter bow = new BufferedWriter( new OutputStreamWriter( fos ) );
 
-            while ( ( bline = br.readLine() ) != null ) {
-               // while ( i < 1000 ) {
-               // bline = br.readLine();
-
-               if ( bline.contains( "latitude" ) || ( bline.contains( "0,0" ) ) ) {
-                  bline = br.readLine();
-               }
-               if ( bline.contains( "\"" ) ) {
-                  bline = bline.replace( "$", "" );
-                  int b = bline.indexOf( "\"" );
-                  int e = bline.indexOf( "\"", b + 1 );
-                  subline = bline.substring( b + 1, e );
-                  subline = subline.replace( ",", " " );
-                  subline = subline.replace( "  ", " " );
-                  bline = bline.replaceAll( "\".*?\"", subline );
-               }
-               codat = bline.split( "," );
-               codat[2] = codat[2].replaceAll( " ", "." );
-               codat[3] = codat[3].replaceAll( " ", "." );
-               geodna = GeoDNA.encode( Double.parseDouble( codat[2] ), Double.parseDouble( codat[3] ), geo_precision );
-               bline = cleaner.Clean( codat[1] );
-               NameWords words = new NameWords( bline, nam_precision );
-               // includes temporary fix for company names that have "Pipes", replace with "Tilde"
-               hash = geodna + words.nameHash().replace( "|", "~" );
-               hash = hash.replace( "|", "~" );
-               if ( ptype == "todisc" ) {
-                  // console( codat[0] + "|" + hash );
-                  bow.write( codat[0] + "|" + hash );
-                  bow.newLine();
-               } else {
-                  if ( names.containsKey( hash ) ) {
-                     dupecount++;
-                     console( geo_precision + "/" + nam_precision + "|" + codat[0] + "|" + names.get( hash ) + "|"
-                           + hash );
-                     bow.write( geo_precision + "/" + nam_precision + "|" + codat[0] + "|" + names.get( hash ) + "|"
-                           + hash );
-                     bow.newLine();
-                  } else {
-                     names.put( hash, codat[0] );
-                  }
-               }
-               // i++;
-               counter++;
-               if ( counter % segment == 0 ) {
-                  // console( String.valueOf( counter / segment ) );
-               }
-            }
-            console( "Results = " + dupecount );
-            j++;
-            br.close();
-            // bow.close();
+         if ( ishead ) {
+            bow.write( "geodna" + dl + "namdna" + br.readLine().replace( ",", dl ) );
+            bow.newLine();
          }
+         while ( ( bline = br.readLine() ) != null ) {
+            codat = parseCSVline( bline, columns );
+            if ( !codat[1].equals( "" ) ) {
+               geodna = GeoDNA.encode( Double.parseDouble( codat[1] ), Double.parseDouble( codat[2] ), geo_precision );
+               namdna = ( new NameWords( cleaner.Clean( codat[0] ), nam_precision ) ).nameHash();
+            } else {
+               geodna = "";
+               namdna = "";
+            }
+            if ( !deDupe( geodna + namdna ) ) {
+               bow.write( geodna + dl + namdna + genColumns( codat ) );
+               bow.newLine();
+               counter++;
+            } else {
+               codat[columns - 1] = "D";
+               bow.write( geodna + dl + namdna + genColumns( codat ) );
+               bow.newLine();
+               dupes++;
+            }
+            if ( counter % 100000 == 0 ) {
+               console( "Processed " + counter + " lines" );
+            }
+         }
+         console( "Processed " + counter + " unique records" );
+         console( "Skipped " + dupes + " duplicate records" );
+         br.close();
+         bow.close();
 
       } catch ( Exception e ) {
-         System.out.println( subline );
          System.out.println( bline );
+         System.out.println( "" );
          e.printStackTrace();
          // TODO Auto-generated catch block
       }
       console( "Done" );
    }
 
+   private boolean deDupe( String k ) {
+      if ( geonam.containsKey( k ) ) {
+         geonam.put( k, geonam.get( k ) + 1 );
+         return true;
+      } else {
+         geonam.put( k, 1 );
+         return false;
+      }
+   }
+   
+   private String genColumns( String[] s ) {
+      int i = 0;
+      String columns = "";
+      while( i < s.length ){
+         columns = columns + dl + s[i];
+         i++;
+      }
+      return columns;
+   }
+
+   private String[] parseCSVline( String l, int i ) throws IOException {
+      String[] iLine = new String[i];
+      list = ( ArrayList<CSVRecord> ) CSVParser.parse( l, CSVFormat.EXCEL ).getRecords();
+      record = list.get( 0 );
+      int k = 0;
+      while ( k < record.size() ) {
+         iLine[k] = record.get( k );
+         k++;
+      }
+      return iLine;
+   }
+
+   private void console( int i ) {
+      System.out.println( i );
+   }
+   
    private void console( String s ) {
       System.out.println( s );
    }

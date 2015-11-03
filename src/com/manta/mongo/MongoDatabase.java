@@ -16,7 +16,8 @@ public class MongoDatabase {
 	private static Boolean ismongoclient = false;
 	private static MongoClient mongoclient;
 	// Host defaults for now
-	private static String host = "mongo-e.mongodb.main.production.aws.ecnext.net";
+	private static String host = "mongo-d.mongodb.mstest.production.aws.ecnext.net";
+	//mongo-e.mongodb.mstest.production.aws.ecnext.net
 	private static int port = 27017;
 	
 	// Project
@@ -24,19 +25,23 @@ public class MongoDatabase {
 	private static DBCollection mycollection;
 	private static BasicDBObject query;
 	public static DBCursor cursor;
+	
 	//Project defaults for now
 	private static String database = "mstest";
-	private static String collection = "connections";
+	//private static String collection = "connections";
+	private static String collection = "products";
 	private static int toskip = 0;
 	private static int tolimit = 0;
 
 	
 	
 	public static void setMongoClient() throws UnknownHostException {
-		if( !ismongoclient ) setMongoClient();
+		//if( !ismongoclient ) setMongoClient();
+	   setHost();
 		setDatabase( database, collection );
-		setQuery( "type" , "recommendation" );
-		cursor = mycollection.find( query ).skip( toskip ).limit( tolimit );
+		//setQuery( "type" , "recommendation" );
+		//cursor = mycollection.find( query ).skip( toskip ).limit( tolimit );
+		cursor = mycollection.find();
 	}
 
 

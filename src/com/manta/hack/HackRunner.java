@@ -1,7 +1,7 @@
 package com.manta.hack;
 
-import com.manta.company.MantaBedrockMatchTest;
-import com.manta.company.MantaDedupeNamesTest;
+import com.manta.company.NameWordRunner;
+import com.manta.mongo.MongoExtract;
 
 public class HackRunner {
 
@@ -25,8 +25,13 @@ public class HackRunner {
 
       // NameWordBuilder hash = new NameWordBuilder();
       // hash.nameFileParser();
-      MantaBedrockMatchTest names = new MantaBedrockMatchTest();
-      names.nameFileParser();
+      // MantaBedrockMatchTest names = new MantaBedrockMatchTest();
+      // names.nameFileParser();
+      
+      //NameWordRunner names = new NameWordRunner();
+      //names.nameFileParser();
+      
+      MongoExtract.run( 1 );
 
       // Test KibanaQuerySequence
       /*
