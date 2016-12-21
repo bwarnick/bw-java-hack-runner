@@ -1,0 +1,11 @@
+{
+  "base_url" : "https://affiliates.homeyou.com/api/",
+  "endpoint" : "report-by-day",
+  "token" : "token=936e04d1cddca0dcddf1063544c0d799fdf7004c24ca8fce7a331a65654a7572",
+  "params" : [ "month" , "campaign" ],
+  "user_agent" : "Hazel",
+  "request_method" : "GET",
+  "content_type" : "text/html",
+  "input_file" : "./conf/resources/homeyou/homeyou_leads_campaigns.json",
+  "output_file" : "/Users/bradwarnick/io/homeyou_leads_revenue_"
+}

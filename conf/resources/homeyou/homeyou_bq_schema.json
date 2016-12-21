@@ -1,0 +1,24 @@
+{
+  "fields" : [
+    {
+      "name" : "date",
+      "type" : "STRING"
+    },
+    {
+      "name" : "campaign_id",
+      "type" : "STRING"
+    },
+    {
+      "name" : "campaign_name",
+      "type" : "STRING"
+    },
+    {
+      "name" : "total_leads",
+      "type" : "INTEGER"
+    },
+    {
+      "name" : "total_revenue",
+      "type" : "FLOAT"
+    }
+  ]
+}

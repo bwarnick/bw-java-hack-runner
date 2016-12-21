@@ -1,7 +1,10 @@
 package com.manta.hack;
 
-import com.manta.company.NameWordRunner;
-import com.manta.mongo.MongoExtract;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.manta.homeyou.*;
+
+import java.io.File;
+
 
 public class HackRunner {
 
@@ -27,11 +30,16 @@ public class HackRunner {
       // hash.nameFileParser();
       // MantaBedrockMatchTest names = new MantaBedrockMatchTest();
       // names.nameFileParser();
-      
       //NameWordRunner names = new NameWordRunner();
       //names.nameFileParser();
-      
-      MongoExtract.run( 1 );
+      //MongoExtract.run( 1 );
+
+      ObjectMapper jsonmapper = new ObjectMapper();
+      HomeyouEndpoint endpoint = jsonmapper.readValue( new File( "./conf/resources/homeyou/homeyou_endpoint_pros" ), HomeyouEndpoint.class );
+      HomeyouGetProsData job = new HomeyouGetProsData();
+      job.getData( endpoint );
+
+
 
       // Test KibanaQuerySequence
       /*

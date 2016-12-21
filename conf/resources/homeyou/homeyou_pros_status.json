@@ -1,0 +1,10 @@
+[
+  { "status": "new" },
+  { "status": "interested" },
+  { "status": "no-answer" },
+  { "status": "active" },
+  { "status": "inactive" },
+  { "status": "not-interested" },
+  { "status": "junk-spam" },
+  { "status": "basic-profile" }
+]

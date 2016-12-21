@@ -1,0 +1,160 @@
+{
+  "success": true,
+  "data": [
+    {
+      "day": "2016-10-01",
+      "total_leads": 2,
+      "total_revenue": 13.16
+    },
+    {
+      "day": "2016-10-02",
+      "total_leads": 6,
+      "total_revenue": 24.63
+    },
+    {
+      "day": "2016-10-03",
+      "total_leads": 9,
+      "total_revenue": 62.63
+    },
+    {
+      "day": "2016-10-04",
+      "total_leads": 5,
+      "total_revenue": 32.54
+    },
+    {
+      "day": "2016-10-05",
+      "total_leads": 8,
+      "total_revenue": 39.02
+    },
+    {
+      "day": "2016-10-06",
+      "total_leads": 12,
+      "total_revenue": 78.5
+    },
+    {
+      "day": "2016-10-07",
+      "total_leads": 8,
+      "total_revenue": 37.22
+    },
+    {
+      "day": "2016-10-08",
+      "total_leads": 5,
+      "total_revenue": 30.49
+    },
+    {
+      "day": "2016-10-09",
+      "total_leads": 1,
+      "total_revenue": 6.17
+    },
+    {
+      "day": "2016-10-10",
+      "total_leads": 6,
+      "total_revenue": 44.03
+    },
+    {
+      "day": "2016-10-11",
+      "total_leads": 8,
+      "total_revenue": 42.77
+    },
+    {
+      "day": "2016-10-12",
+      "total_leads": 9,
+      "total_revenue": 40.98
+    },
+    {
+      "day": "2016-10-13",
+      "total_leads": 9,
+      "total_revenue": 35.67
+    },
+    {
+      "day": "2016-10-14",
+      "total_leads": 2,
+      "total_revenue": 7.39
+    },
+    {
+      "day": "2016-10-15",
+      "total_leads": 6,
+      "total_revenue": 35.02
+    },
+    {
+      "day": "2016-10-16",
+      "total_leads": 2,
+      "total_revenue": 11.5
+    },
+    {
+      "day": "2016-10-17",
+      "total_leads": 15,
+      "total_revenue": 91.55
+    },
+    {
+      "day": "2016-10-18",
+      "total_leads": 6,
+      "total_revenue": 40.04
+    },
+    {
+      "day": "2016-10-19",
+      "total_leads": 4,
+      "total_revenue": 23.61
+    },
+    {
+      "day": "2016-10-20",
+      "total_leads": 9,
+      "total_revenue": 43.14
+    },
+    {
+      "day": "2016-10-21",
+      "total_leads": 6,
+      "total_revenue": 28.72
+    },
+    {
+      "day": "2016-10-22",
+      "total_leads": 6,
+      "total_revenue": 33.24
+    },
+    {
+      "day": "2016-10-23",
+      "total_leads": 4,
+      "total_revenue": 20.84
+    },
+    {
+      "day": "2016-10-24",
+      "total_leads": 9,
+      "total_revenue": 46.63
+    },
+    {
+      "day": "2016-10-25",
+      "total_leads": 13,
+      "total_revenue": 55.73
+    },
+    {
+      "day": "2016-10-26",
+      "total_leads": 6,
+      "total_revenue": 24.73
+    },
+    {
+      "day": "2016-10-27",
+      "total_leads": 15,
+      "total_revenue": 84.57
+    },
+    {
+      "day": "2016-10-28",
+      "total_leads": 5,
+      "total_revenue": 35.27
+    },
+    {
+      "day": "2016-10-29",
+      "total_leads": 4,
+      "total_revenue": 13
+    },
+    {
+      "day": "2016-10-30",
+      "total_leads": 6,
+      "total_revenue": 21.74
+    },
+    {
+      "day": "2016-10-31",
+      "total_leads": 15,
+      "total_revenue": 67.96
+    }
+  ]
+}

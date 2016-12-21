@@ -22,7 +22,7 @@ public class BigqueryInsert implements Runnable {
     count = i;
   }
 
-  @Override
+
   public void run( ) {
     Long datevalue = System.currentTimeMillis();
     SimpleDateFormat sdf = new SimpleDateFormat( "MM/dd/yyyy HH:mm:ss.SSS" );

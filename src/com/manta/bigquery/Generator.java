@@ -21,6 +21,7 @@ public class Generator {
 	public Generator() {
     }
 
+
     static private String getBqType(String type) {
         String bqType = "UNKNOWN";
         switch (type) {
@@ -53,7 +54,7 @@ public class Generator {
 
     private ArrayList<TableFieldSchema> getSchemaFields(String name, JsonNode node) throws IOException {
         String type = node.get("type").textValue();
-        ArrayList<TableFieldSchema> schemaFields = new ArrayList<>();
+        ArrayList<TableFieldSchema> schemaFields = new ArrayList();
 
         switch (type) {
             case "object":

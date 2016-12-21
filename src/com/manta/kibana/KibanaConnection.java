@@ -1,7 +1,7 @@
 package com.manta.kibana;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
+        import java.net.HttpURLConnection;
+        import java.net.URL;
 
 public class KibanaConnection {
 
