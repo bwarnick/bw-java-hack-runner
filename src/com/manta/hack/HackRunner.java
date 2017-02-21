@@ -34,10 +34,19 @@ public class HackRunner {
       //names.nameFileParser();
       //MongoExtract.run( 1 );
 
+      //HOMEYOU pro_data update SAVE
       ObjectMapper jsonmapper = new ObjectMapper();
       HomeyouEndpoint endpoint = jsonmapper.readValue( new File( "./conf/resources/homeyou/homeyou_endpoint_pros" ), HomeyouEndpoint.class );
       HomeyouGetProsData job = new HomeyouGetProsData();
       job.getData( endpoint );
+      //
+
+      /* HOMEYOU leads_data update SAVE
+      ObjectMapper jsonmapper = new ObjectMapper();
+      HomeyouEndpoint endpoint = jsonmapper.readValue( new File( "./conf/resources/homeyou/homeyou_endpoint_leads" ), HomeyouEndpoint.class );
+      HomeyouGetLeadsData job = new HomeyouGetLeadsData();
+      job.getData( endpoint );
+      */
 
 
 

@@ -15,6 +15,7 @@ public class HomeyouGetProsData {
     private File input_file;
     private File output_file;
     private String[] fields;
+    private String[] params;
     private JsonNode pvals;
     private List<String> plist;
     private HomeyouConnection connection;
@@ -28,7 +29,6 @@ public class HomeyouGetProsData {
 
 
     public void getData( HomeyouEndpoint endpoint ) throws IOException {
-        // System.out.println( endpoint.toString() );
         input_file = endpoint.getInput_file();
         output_file = endpoint.getOutput_file();
         fields = endpoint.getFields();
@@ -42,13 +42,17 @@ public class HomeyouGetProsData {
             connection = new HomeyouConnection( endpoint );
             fout = new BufferedWriter( new OutputStreamWriter( new FileOutputStream( output_file ), "UTF8" ));
             reader = new HomeyouReader();
-            // System.out.println( plist.toString());
+            System.out.println( plist.toString());
+            //for( int i = 0; i < plist.size(); i++){
             for( String s : plist ) {
-                // System.out.println(s);
-                connection.setUrl( new String[]{ s } );
+                System.out.println( s );
+                connection.setUrl( fields, new String[]{ s } );
+                //System.out.println( connection.getUrl().toString());
                 mapper = new HomeyouMapper( reader.getBufferedReader( connection ));
                 while( mapper.hasMore ) {
-                    //System.out.println( mapper.getMore() );
+                    //String output = mapper.getMore();
+                    //System.out.println( output );
+                    //fout.write( output );
                     fout.write( mapper.getMore() );
                     fout.newLine();
                 }

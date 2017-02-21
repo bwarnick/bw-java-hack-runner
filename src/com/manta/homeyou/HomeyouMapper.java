@@ -19,9 +19,10 @@ public class HomeyouMapper {
     private HomeyouLineItem line = new HomeyouLineItem();
 
 
-    public HomeyouMapper( BufferedReader reader, String i, String n, String v, String p ) {
+    public HomeyouMapper( BufferedReader reader, String i, String n, String r, String v, String p ) {
         line.setCampaignId( i );
         line.setCampaignName( n );
+        line.setPoolRoot( r );
         line.setIvrName( v );
         line.setPhoneNumber( p );
         MappingJsonFactory factory = new MappingJsonFactory();
@@ -42,6 +43,7 @@ public class HomeyouMapper {
             current = parser.nextToken();
             while ( current != JsonToken.START_ARRAY ) {
                 current = parser.nextToken();
+                //System.out.println( current );
                 if( current != null ) hasMore = true;
             }
         } catch (IOException e) {
@@ -52,10 +54,10 @@ public class HomeyouMapper {
 
     public String getMore() {
         newline = new StringBuilder();
-        // map.
         try {
             while( hasMore && current != JsonToken.END_ARRAY ) {
                 current = parser.nextToken();
+                //System.out.println( current );
                 if( current == JsonToken.START_OBJECT ) {
                     newline.append( parser.readValueAsTree().toString() );
                     return newline.toString();
@@ -65,7 +67,7 @@ public class HomeyouMapper {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return "";
     }
 
 

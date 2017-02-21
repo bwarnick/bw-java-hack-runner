@@ -18,12 +18,12 @@ public class HomeyouEndpoint {
     public String content_type;
     public String input_file;
     public String output_file;
-
-    private StringBuilder surl;
+    private URL url;
+    private StringBuilder url_template;
     private static String qmk = "?";
     private static String amp = "&";
     private static String eqs = "=";
-    private static String plh = "<p>";
+    private static String plh = "<pval>";
 
     public HomeyouEndpoint(){
     }
@@ -31,36 +31,33 @@ public class HomeyouEndpoint {
     //https://affiliates.homeyou.com/api/report-by-day?token=936e04d1cddca0dcddf1063544c0d799fdf7004c24ca8fce7a331a65654a7572&month=<p>&campaign=<p>
     //https://affiliates.homeyou.com/api/contractors?token=936e04d1cddca0dcddf1063544c0d799fdf7004c24ca8fce7a331a65654a7572&status=<p>
 
-    public void setParams( String[] p ) {
-        fields = p;
+    public URL getUrl() {
+        return url;
     }
 
-    public URL getUrl() {
-        if (surl == null) setSurl();
+    public void setUrl( String[] f, String[] p ) {
+        fields = f;
+        setSurl();
+        String t = url_template.toString();
+        int i = 0;
+        while (i < p.length) {
+            t = t.replaceFirst(plh, p[i]);
+            i++;
+        }
         try {
-            return new URL( surl.toString() );
+            url = new URL(t);
         } catch (MalformedURLException e) {
             e.printStackTrace();
-        }
-        return null;
-    }
-
-    public void setUrl( String[] p ) {
-        setSurl();
-        int i = 0;
-        while( i < p.length ) {
-            surl = new StringBuilder( surl.toString().replaceFirst( plh, p[i]));
-            i++;
         }
     }
 
     private void setSurl() {
-        surl = new StringBuilder( base_url );
-        surl.append( endpoint );
-        surl.append( qmk + token );
+        url_template = new StringBuilder( base_url );
+        url_template.append( endpoint );
+        url_template.append( qmk + token );
         int i = 0;
         while( i < fields.length ){
-            surl.append( amp + fields[i] + eqs + plh );
+            url_template.append( amp + fields[i] + eqs + plh );
             i++;
         }
     }
@@ -87,8 +84,8 @@ public class HomeyouEndpoint {
         return fields;
     }
 
-    public String toString() {
-        return getUrl().toString();
-    }
+    //public String toString() {
+    //    return getUrl().toString();
+    //}
 }
 

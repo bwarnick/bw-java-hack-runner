@@ -1,0 +1,512 @@
+[
+  {
+    "campaign": "2824",
+    "name": "Manta Additions & Remodels",
+    "ivr": "Manta Additions & Remodels IVR",
+    "phone": "8556330248"
+  },
+  {
+    "campaign": "2863",
+    "name": "Manta Appliances Calls",
+    "ivr": "Manta Appliances IVR",
+    "phone": "6172022780"
+  },
+  {
+    "campaign": "3311",
+    "name": "Manta Appraisers Calls",
+    "ivr": "Manta Appraisers IVR",
+    "phone": "6172076954"
+  },
+  {
+    "campaign": "3306",
+    "name": "Manta Architects and Engineers Calls",
+    "ivr": "Manta Architects and Engineers IVR",
+    "phone": "6172076748"
+  },
+  {
+    "campaign": "3297",
+    "name": "Manta Architects Calls",
+    "ivr": "Manta Architects IVR",
+    "phone": "6172070395"
+  },
+  {
+    "campaign": "2864",
+    "name": "Manta Basement Waterproofing Calls",
+    "ivr": "Manta Basement Waterproofing IVR",
+    "phone": "6172075762"
+  },
+  {
+    "campaign": "3307",
+    "name": "Manta Building Inspection Services Calls",
+    "ivr": "Manta Building Inspection Services IVR",
+    "phone": "6172022723"
+  },
+  {
+    "campaign": "2858",
+    "name": "Manta Cabinets Calls",
+    "ivr": "Manta Cabinets IVR",
+    "phone": "6172022846"
+  },
+  {
+    "campaign": "3322",
+    "name": "Manta Cabinets Calls #2",
+    "ivr": "Manta Cabinets IVR",
+    "phone": "6172076773"
+  },
+  {
+    "campaign": "3316",
+    "name": "Manta Cabinets Manufacturers Calls",
+    "ivr": "Manta Cabinets Manufacturers IVR",
+    "phone": "6172076841"
+  },
+  {
+    "campaign": "0000",
+    "name": "Manta Cabinets, Kitchen",
+    "ivr": "Manta Cabinets, Kitchen IVR",
+    "phone": "6172092783"
+  },
+  {
+    "campaign": "2833",
+    "name": "Manta Carpentry Calls",
+    "ivr": "Manta Carpentry IVR",
+    "phone": "8554372386"
+  },
+  {
+    "campaign": "2845",
+    "name": "Manta Carpet Cleaning Calls",
+    "ivr": "Manta Carpet Cleaning IVR",
+    "phone": "6172022708"
+  },
+  {
+    "campaign": "3335",
+    "name": "Manta Cleaners Calls",
+    "ivr": "Manta Cleaners IVR",
+    "phone": "6172076261"
+  },
+  {
+    "campaign": "2831",
+    "name": "Manta Cleaning Calls",
+    "ivr": "Manta Cleaning IVR",
+    "phone": "8554609613"
+  },
+  {
+    "campaign": "2827",
+    "name": "Manta Concrete Calls",
+    "ivr": "Manta Concrete IVR",
+    "phone": "6172076598"
+  },
+  {
+    "campaign": "2827",
+    "name": "Manta Concrete Calls",
+    "ivr": "Manta Concrete IVR",
+    "phone": "8558054920"
+  },
+  {
+    "campaign": "3323",
+    "name": "Manta Construction Sand and Gravel Calls",
+    "ivr": "Manta Construction Sand and Gravel IVR",
+    "phone": "6172092804"
+  },
+  {
+    "campaign": "0000",
+    "name": "Manta Construction, Repair, and Dismantling Services",
+    "ivr": "Manta Construction, Repair and Dismantling Services IVR",
+    "phone": "6172076405"
+  },
+  {
+    "campaign": "3336",
+    "name": "Manta Counter Tops Calls",
+    "ivr": "Manta Counter Tops IVR",
+    "phone": "6172075603"
+  },
+  {
+    "campaign": "2865",
+    "name": "Manta Countertops Calls",
+    "ivr": "Manta Countertops IVR",
+    "phone": "6172070318"
+  },
+  {
+    "campaign": "2861",
+    "name": "Manta Demolition Calls",
+    "ivr": "Manta Demolition IVR",
+    "phone": "6172022974"
+  },
+  {
+    "campaign": "3334",
+    "name": "Manta Doors Calls",
+    "ivr": "Manta Doors IVR",
+    "phone": "6172076249"
+  },
+  {
+    "campaign": "2844",
+    "name": "Manta Drywall Calls",
+    "ivr": "Manta Drywall IVR",
+    "phone": "6172022719"
+  },
+  {
+    "campaign": "2825",
+    "name": "Manta Electrical Calls",
+    "ivr": "Manta Electrical IVR",
+    "phone": "8555023956"
+  },
+  {
+    "campaign": "3296",
+    "name": "Manta Engineering Services Calls",
+    "ivr": "Manta Engineering Services IVR",
+    "phone": "6172076847"
+  },
+  {
+    "campaign": "3310",
+    "name": "Manta Engineers Calls",
+    "ivr": "Manta Engineers IVR",
+    "phone": "6172076884"
+  },
+  {
+    "campaign": "2847",
+    "name": "Manta Fences Calls",
+    "ivr": "Manta Fences IVR",
+    "phone": "6172022648"
+  },
+  {
+    "campaign": "3325",
+    "name": "Manta Fencing Calls",
+    "ivr": "Manta Fencing IVR",
+    "phone": "6172076614"
+  },
+  {
+    "campaign": "2849",
+    "name": "Manta Flooring Calls",
+    "ivr": "Manta Flooring IVR",
+    "phone": "6172022896"
+  },
+  {
+    "campaign": "2829",
+    "name": "Manta Foundations Calls",
+    "ivr": "Manta Foundations IVR",
+    "phone": "8557820218"
+  },
+  {
+    "campaign": "2855",
+    "name": "Manta Furniture Calls",
+    "ivr": "Manta Furniture IVR",
+    "phone": "6172022254"
+  },
+  {
+    "campaign": "2868",
+    "name": "Manta Garage Doors Calls",
+    "ivr": "Manta Garage Doors IVR",
+    "phone": "6172076119"
+  },
+  {
+    "campaign": "3318",
+    "name": "Manta Garage Doors Calls #2",
+    "ivr": "Manta Garage Doors IVR",
+    "phone": "6172076866"
+  },
+  {
+    "campaign": "2856",
+    "name": "Manta Gutters Calls",
+    "ivr": "Manta Gutters IVR",
+    "phone": "6172076120"
+  },
+  {
+    "campaign": "2851",
+    "name": "Manta Handyman Calls",
+    "ivr": "Manta Handyman IVR",
+    "phone": "6172076124"
+  },
+  {
+    "campaign": "0000",
+    "name": "Manta Home Design and Planning Services",
+    "ivr": "Manta Home Design and Planning Services IVR",
+    "phone": "6172076936"
+  },
+  {
+    "campaign": "3304",
+    "name": "Manta House Cleaning Calls",
+    "ivr": "Manta House Cleaning IVR",
+    "phone": "6172076905"
+  },
+  {
+    "campaign": "3303",
+    "name": "Manta Industrial Cleaning Services Calls",
+    "ivr": "Manta Industrial Cleaning Services IVR",
+    "phone": "6172022610"
+  },
+  {
+    "campaign": "2857",
+    "name": "Manta Insulation Calls",
+    "ivr": "Manta Insulation IVR",
+    "phone": "6172022946"
+  },
+  {
+    "campaign": "3299",
+    "name": "Manta Interior Decorators Design and Consultants Calls",
+    "ivr": "Manta Interior Decorators Design and Consultants IVR",
+    "phone": "6172023898"
+  },
+  {
+    "campaign": "3301",
+    "name": "Manta Interior Designer Calls",
+    "ivr": "Manta Interior Designer IVR",
+    "phone": "6172076664"
+  },
+  {
+    "campaign": "2860",
+    "name": "Manta Kitchen Remodeling Calls",
+    "ivr": "Manta Kitchen Remodeling IVR",
+    "phone": "6172022940"
+  },
+  {
+    "campaign": "3298",
+    "name": "Manta Land Surveyors Calls",
+    "ivr": "Manta Land Surveyors IVR",
+    "phone": "6172076665"
+  },
+  {
+    "campaign": "2801",
+    "name": "Manta Landscaping Calls",
+    "ivr": "Manta Landscaping IVR",
+    "phone": "8662839235"
+  },
+  {
+    "campaign": "3328",
+    "name": "Manta Lawn and Garden Sprinklers Calls",
+    "ivr": "Manta Lawn and Garden Sprinklers IVR",
+    "phone": "6172076223"
+  },
+  {
+    "campaign": "3319",
+    "name": "Manta Lawn Mowers Calls",
+    "ivr": "Manta Lawn Mowers IVR",
+    "phone": "6172076689"
+  },
+  {
+    "campaign": "2869",
+    "name": "Manta Locksmiths #2 Calls",
+    "ivr": "Manta Locksmith IVR",
+    "phone": "6172022952"
+  },
+  {
+    "campaign": "3312",
+    "name": "Manta Maid and Butler Services Calls",
+    "ivr": "Manta Maid and Butler Services IVR",
+    "phone": "6172076587"
+  },
+  {
+    "campaign": "2830",
+    "name": "Manta Masonry Calls",
+    "ivr": "Manta Masonry IVR",
+    "phone": "8557823119"
+  },
+  {
+    "campaign": "2850",
+    "name": "Manta Moving Calls",
+    "ivr": "Manta Moving IVR",
+    "phone": ""
+  },
+  {
+    "campaign": "2826",
+    "name": "Manta Painting Calls",
+    "ivr": "Manta Painting IVR",
+    "phone": "8554460286"
+  },
+  {
+    "campaign": "3317",
+    "name": "Manta Paving Contractors Calls",
+    "ivr": "Manta Paving Contractors IVR",
+    "phone": "6172076907"
+  },
+  {
+    "campaign": "3309",
+    "name": "Manta Pest Control and Spraying Calls",
+    "ivr": "Manta Pest Control and Spraying IVR",
+    "phone": "6172075867"
+  },
+  {
+    "campaign": "2848",
+    "name": "Manta Pest Control Calls",
+    "ivr": "Manta Pest Control IVR",
+    "phone": "6172022876"
+  },
+  {
+    "campaign": "2758",
+    "name": "Manta Plumbing Calls",
+    "ivr": "Manta Plumbing IVR",
+    "phone": "8776579332"
+  },
+  {
+    "campaign": "3308",
+    "name": "Manta Portable Toilets Calls",
+    "ivr": "Manta Portable Toilets IVR",
+    "phone": "6172076705"
+  },
+  {
+    "campaign": "0000",
+    "name": "Manta Private Swimming Pools",
+    "ivr": "Manta Private Swimming Pools IVR",
+    "phone": "6172070319"
+  },
+  {
+    "campaign": "3327",
+    "name": "Manta Pumps and Pumping Equipment Calls",
+    "ivr": "Manta Pumps and Pumping Equipment IVR",
+    "phone": "6172070389"
+  },
+  {
+    "campaign": "3314",
+    "name": "Manta Real Estate Appraisers Calls",
+    "ivr": "Manta Real Estate Appraisers IVR",
+    "phone": "6172076671"
+  },
+  {
+    "campaign": "2759",
+    "name": "Manta Roofing #1 Calls",
+    "ivr": "Manta Roofing IVR",
+    "phone": "8559744545"
+  },
+  {
+    "campaign": "3324",
+    "name": "Manta Sewer Contractors Calls",
+    "ivr": "Manta Sewer Contractors IVR",
+    "phone": "6172022231"
+  },
+  {
+    "campaign": "2859",
+    "name": "Manta Siding Calls",
+    "ivr": "Manta Siding IVR",
+    "phone": "6172022878"
+  },
+  {
+    "campaign": "3338",
+    "name": "Manta Snowplowing Calls",
+    "ivr": "Manta Snowplowing IVR",
+    "phone": "6172076922"
+  },
+  {
+    "campaign": "3305",
+    "name": "Manta Structural Engineers Calls",
+    "ivr": "Manta Structural Engineers IVR",
+    "phone": "6172022368"
+  },
+  {
+    "campaign": "3300",
+    "name": "Manta Swimming Pool Services Calls",
+    "ivr": "Manta Swimming Pool Services IVR",
+    "phone": "6172022274"
+  },
+  {
+    "campaign": "2853",
+    "name": "Manta Swimming Pools Calls",
+    "ivr": "Manta Swimming Pools IVR",
+    "phone": "6172022936"
+  },
+  {
+    "campaign": "2846",
+    "name": "Manta Tile Work Calls",
+    "ivr": "Manta Tile Work IVR",
+    "phone": "6172075667"
+  },
+  {
+    "campaign": "0000",
+    "name": "Manta Tile, Ceramic",
+    "ivr": "Manta Tile, Ceramic IVR",
+    "phone": "6172076372"
+  },
+  {
+    "campaign": "2866",
+    "name": "Manta Toxic Materials Calls",
+    "ivr": "Manta Toxic Materials IVR",
+    "phone": "6172076269"
+  },
+  {
+    "campaign": "2852",
+    "name": "Manta Tree Service Calls",
+    "ivr": "Manta Tree Service IVR",
+    "phone": "6172076225"
+  },
+  {
+    "campaign": "0000",
+    "name": "Manta Water and Sewer Line Construction",
+    "ivr": "Manta Water and Sewer Line Construction IVR",
+    "phone": "6172076782"
+  },
+  {
+    "campaign": "2867",
+    "name": "Manta Water Damage Restoration Calls",
+    "ivr": "Manta Water Damage Restoration IVR",
+    "phone": "6172022990"
+  },
+  {
+    "campaign": "3332",
+    "name": "Manta Water Main Contractors Calls",
+    "ivr": "Manta Water Main Contractors IVR",
+    "phone": "6172022527"
+  },
+  {
+    "campaign": "2862",
+    "name": "Manta Welders Calls",
+    "ivr": "Manta Welders IVR",
+    "phone": "6172022954"
+  },
+  {
+    "campaign": "3315",
+    "name": "Manta Welding Calls",
+    "ivr": "Manta Welding IVR",
+    "phone": "8554473291"
+  },
+  {
+    "campaign": "3302",
+    "name": "Manta Window Cleaning Calls",
+    "ivr": "Manta Window Cleaning IVR",
+    "phone": "6172023689"
+  },
+  {
+    "campaign": "2854",
+    "name": "Manta Windows Calls",
+    "ivr": "Manta Windows IVR",
+    "phone": "6172070391"
+  },
+  {
+    "campaign": "3320",
+    "name": "Manta Windows Calls #2",
+    "ivr": "Manta Windows IVR",
+    "phone": "6172070398"
+  },
+  {
+    "campaign": "2728",
+    "name": "Manta Calls",
+    "ivr": "na",
+    "phone": ""
+  },
+  {
+    "campaign": "3158",
+    "name": "Manta City/Category Widgets",
+    "ivr": "na",
+    "phone": ""
+  },
+  {
+    "campaign": "3159",
+    "name": "Manta City/Category Widgets Calls",
+    "ivr": "na",
+    "phone": "8554664992"
+  },
+  {
+    "campaign": "3165",
+    "name": "Manta Cost Guide Calls",
+    "ivr": "na",
+    "phone": "8886688262"
+  },
+  {
+    "campaign": "3166",
+    "name": "Manta Cost Guide",
+    "ivr": "na",
+    "phone": ""
+  },
+  {
+    "campaign": "3351",
+    "name": "Manta Profile Widgets",
+    "ivr": "na",
+    "phone": ""
+  }
+]

@@ -2,7 +2,7 @@
   "base_url" : "https://affiliates.homeyou.com/api/",
   "endpoint" : "contractors",
   "token" : "token=936e04d1cddca0dcddf1063544c0d799fdf7004c24ca8fce7a331a65654a7572",
-  "params" : [ "status" ],
+  "fields" : [ "status" ],
   "user_agent" : "Hazel",
   "request_method" : "GET",
   "content_type" : "text/html",

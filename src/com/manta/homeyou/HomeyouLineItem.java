@@ -10,6 +10,7 @@ public class HomeyouLineItem {
     private String campaign_id = "";
     private String campaign_name = "";
     private String ivr_name = "";
+    private String pool_root = "";
     private String phone_number = "";
     private int total_leads = 0;
     private float total_revenue = 0;
@@ -17,6 +18,7 @@ public class HomeyouLineItem {
     private static String id_label = "\"campaign_id\": ";
     private static String cp_label = "\"campaign_name\": ";
     private static String iv_label = "\"ivr_name\": ";
+    private static String pr_label = "\"pool_root\": ";
     private static String ph_label = "\"phone_number\": ";
     private static String ld_label = "\"total_leads\": ";
     private static String rv_label = "\"total_revenue\": ";
@@ -41,6 +43,10 @@ public class HomeyouLineItem {
 
     public void setIvrName( String v ){
         this.ivr_name = v;
+    }
+
+    public void setPoolRoot( String v ){
+        this.pool_root = v;
     }
 
     public void setPhoneNumber( String v ){
@@ -73,6 +79,10 @@ public class HomeyouLineItem {
         return ivr_name;
     }
 
+    public String getPoolRoot() {
+        return pool_root;
+    }
+
     public int getTotal_leads() {
         return total_leads;
     }
@@ -89,6 +99,7 @@ public class HomeyouLineItem {
         line.append( id_label ).append( qt + campaign_id + qt + cm );
         line.append( cp_label ).append( qt + campaign_name + qt + cm );
         line.append( iv_label ).append( qt + ivr_name + qt + cm );
+        line.append( pr_label ).append( qt + pool_root + qt + cm );
         line.append( ph_label ).append( qt + phone_number + qt + cm );
         line.append( ld_label ).append(total_leads).append( cm );
         line.append( rv_label ).append(total_revenue);
